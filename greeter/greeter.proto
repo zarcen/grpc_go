@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package greeter;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a single int
+  rpc SendInt (SimpleInt) returns (SimpleInt) {}
+  
+  // Sends a single double(float64)
+  rpc SendDouble (SimpleDouble) returns (SimpleDouble) {}
+
+  // Sends a single string
+  rpc SendString (SimpleString) returns (SimpleString) {}
+
+  // Sends a Greeting message (int, double, string)
+  rpc SendGreeting (Greeting) returns (Greeting) {}
+
+  // A server-to-client streaming RPC.
+  rpc ServerStreaming (Greeting) returns (stream Greeting) {}
+
+  // A client-to-server streaming RPC.
+  rpc ClientStreaming (stream Greeting) returns (Greeting) {}
+  
+  // A Bidirectional streaming RPC.
+  rpc BidirectionalStreaming (stream Greeting) returns (stream Greeting) {}
+}
+
+message SimpleInt {
+  int32 num = 1;
+}
+
+message SimpleDouble {
+  double num = 1;
+}
+
+message SimpleString {
+  string msg = 1;
+}
+
+message Greeting {
+  int32 id = 1;
+  double fraction = 2;
+  string name = 3;
+}
+
