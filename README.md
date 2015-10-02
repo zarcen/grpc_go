@@ -2,14 +2,22 @@
 grpc evaluation using go language
 
 # Graph, Tables, Snapshots
+- Measure the overhead of marshaling a message.
 ![1](/img/1.png)
+- Y-axis: nanosecond
 ![2](/img/2.png)
+- The very first time to invoke marshaling (no matter what type of message), it always takes MUCH LONGER time.
+- Besides, it also takes a bit longer to marshal/encode the protobuf for every kind of message 
 ![3](/img/3.png)
+- RTT Evaluation (Same Computer)
 ![4](/img/4.png)
+- The first round trip always takes longer
 ![5](/img/5.png)
+- RTT Evaluation (Different Computers)
 ![6](/img/6.png)
 ![7](/img/7.png)
 ![8](/img/8.png)
+- Bandwidth Evaluation / Peak line rate
 ![9](/img/9.png)
 ![10](/img/10.png)
 ![11](/img/11.png)
