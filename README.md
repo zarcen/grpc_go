@@ -11,6 +11,8 @@ grpc evaluation using go language
 ![7](/img/7.png)
 ![8](/img/8.png)
 ![9](/img/9.png)
+![10](/img/10.png)
+![11](/img/11.png)
 
 # Notes
 - xxx.proto:16:12: Explicit 'optional' labels are disallowed in the Proto3 syntax. To define 'optional' fields in Proto3, simply remove the 'optional' label, as fields│
